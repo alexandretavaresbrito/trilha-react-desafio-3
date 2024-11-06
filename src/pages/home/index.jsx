@@ -12,7 +12,7 @@ const Home = () => {
     const navigate = useNavigate();
 
     const handleClickSignIn = () => {
-        navigate('/login')
+        navigate('/cadastro')
     }
 
     return (<>
