@@ -30,8 +30,7 @@ const Cadastro = () => {
 
             alert('Usuário, email ou senha inválido')
         }catch(e){
-            //TODO: HOUVE UM ERRO
-            alert('Erro no cadastro', {error: e})
+            alert('Erro no cadastro', {error: e.message})
         }
     };
 

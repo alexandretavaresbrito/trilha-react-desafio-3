@@ -9,6 +9,7 @@ import { useForm } from "react-hook-form";
 
 
 import { Container, Title, Column, TitleLogin, SubtitleLogin, EsqueciText, CriarText, Row, Wrapper } from './styles';
+import { useEffect } from "react";
 
 const Login = () => {
 
@@ -20,21 +21,46 @@ const Login = () => {
     });
 
     const onSubmit = async (formData) => {
-        try{
-            const {data} = await api.get(`/users?email=${formData.email}&senha=${formData.senha}`);
-            
-            if(data.length && data[0].id){
-                navigate('/feed') 
-                return
+        let goThere = false;
+        await api.get()
+        .then(
+            (data) => {
+                let usuarios = data.data.users;
+                usuarios.filter((user) => {
+                    if(user.email === formData.email && user.senha === formData.senha){
+                        goThere = true;
+                    }
+                }) 
             }
+        ).catch((e) =>{
+            alert('Erro no login', {error: e.message});
+        });
 
+        if(goThere){
+            navigate('/feed');
+        }else{
             alert('Usuário ou senha inválido')
-        }catch(e){
-            //TODO: HOUVE UM ERRO
         }
-    };
 
-    console.log('errors', errors);
+    };      
+    
+    // const onSubmit = async (formData) => {
+    //     try{
+    //         const {data} = await api.get(`/users?email=${formData.email}&senha=${formData.senha}`);
+            
+    //         if(data.length && data[0].id){
+    //             navigate('/feed') 
+    //             return
+    //         }
+
+    //         alert('Usuário ou senha inválido')
+    //     }catch(e){
+    //         //TODO: HOUVE UM ERRO
+    //     }
+    // };
+
+    // console.log('errors', errors);
+
 
     return (<>
         <Header />

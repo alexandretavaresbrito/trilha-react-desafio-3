@@ -42,20 +42,26 @@ export const Menu = styled.a`
     font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 25px;
     color: #FFFFFF;
     margin-right: 12px;
+    &:hover {
+            cursor: pointer;
+    }
 `
 
 export const MenuRight = styled.a`
     font-family: 'Open Sans';
     font-style: normal;
-    font-size: 12px;
+    font-size: 16px;
     line-height: 25px;
     color: #FFFFFF;
     margin-right: 12px;
     text-decoration: none;
+    &:hover {
+            cursor: pointer;
+    }  
 `
 
 export const UserPicture = styled.img`
