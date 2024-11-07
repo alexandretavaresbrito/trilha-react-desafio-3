@@ -9,7 +9,6 @@ import { useForm } from "react-hook-form";
 
 
 import { Container, Title, Column, TitleLogin, SubtitleLogin, EsqueciText, CriarText, Row, Wrapper } from './styles';
-import { useEffect } from "react";
 
 const Login = () => {
 
