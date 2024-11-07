@@ -11,6 +11,16 @@ export const InputContainer = styled.div`
     margin-bottom: 20px;
 `
 
+export const ErroDoTexto  = styled.p`
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-size: 12px;
+    line-height: 15px;
+    margin: 10px 0;
+
+    color: #ff0000;
+` 
+
 export const IconContainer = styled.div`
     margin-right: 10px;
 `

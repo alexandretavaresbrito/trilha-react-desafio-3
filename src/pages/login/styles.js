@@ -28,8 +28,6 @@ export const Row = styled.div`
     margin-top: 20px;
 `
 
-
-
 export const Title = styled.h2`
     font-family: 'Open Sans';
     font-style: normal;
@@ -59,7 +57,6 @@ export const SubtitleLogin = styled.p`
     line-height: 25px;
     margin-bottom: 35px;
 `
-
 
 export const EsqueciText  = styled.p`
     font-family: 'Open Sans';
