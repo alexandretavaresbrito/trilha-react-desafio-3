@@ -17,12 +17,6 @@
       "name": "Alexandre",
       "email": "alexandre@email.com",
       "password": "123456"
-    },
-    {
-      "id": "adf5",
-      "nome": "Márcia",
-      "email": "marcia@email.com",
-      "password": "123456"
     }
   ]
 }
